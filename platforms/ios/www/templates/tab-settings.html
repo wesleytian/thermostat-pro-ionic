@@ -1,0 +1,46 @@
+<ion-view view-title="Settings">
+  <ion-content ng-controller="SettingsCtrl">
+
+    <div class="list list-inset">
+      <ion-list>
+        <ion-radio ng-model="choice.value" ng-value="'A'">Fahrenheit</ion-radio>
+        <ion-radio ng-model="choice.value" ng-value="'B'">Celsius</ion-radio>
+      </ion-list>
+    </div>
+
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class ="input-label">
+          Adjust short cycle
+        </div>
+        <select ng-model-options="options">
+          <option value="1min"> 1 minute </option>
+          <option value="2min"> 2 minute </option>
+          <option value="3min"> 3 minute </option>
+          <option value="4min"> 4 minute </option>
+          <option value="5min"> 5 minute </option>
+        </select>
+      </label>
+    </div>
+
+    <ion-toggle>
+      Use heat index instead
+    </ion-toggle>
+
+    <ion-list>
+      <ion-toggle  ng-model="settings.toggleLED">
+        LED Light
+      </ion-toggle>
+
+      <button class="button button-block button-balanced">
+        Reset all Settings
+      </button>
+
+      <button class="button button-block button-assertive">
+        Reset all memory and settings
+      </button>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>

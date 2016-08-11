@@ -1,0 +1,31 @@
+<ion-view view-title="Schedule">
+
+  <ion-nav-buttons side="left">
+  <button class="button button-clear button-positive" ng-click="editEntries()">
+    Edit
+  </button>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear button-positive ion-plus right" ng-click="newEntry()" ></button>
+  </ion-nav-buttons>
+
+  <ion-content ng-controller="ScheduleCtrl">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="entry in entries" type="item-text-wrap" href="#/tab/entry/{{entry.id}}">
+        <img ng-src="{{entry.face}}">
+        <h2>{{entry.name}}</h2>
+        <p>{{entry.lastText}}</p>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-option-button class="button-assertive"
+                           ng-click="remove(entry)">
+          Delete
+        </ion-option-button>
+
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  </ion-view>
+

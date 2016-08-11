@@ -1,0 +1,78 @@
+<ion-view view-title="Settings">
+  <ion-content ng-controller="SettingsCtrl">
+
+    <div class="list list-inset">
+      <ion-list>
+        <ion-radio ng-model="choice.value" ng-value="'A'">Fahrenheit</ion-radio>
+        <ion-radio ng-model="choice.value" ng-value="'B'">Celsius</ion-radio>
+      </ion-list>
+    </div>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        Short cycle is the minimum duration that the system has to rest before
+        being turned on again to reduce damage to the compressor.
+        Many systems have the recommended short cycle duration written on it somewhere.
+      </div>
+    </div>
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class ="input-label">
+          Short Cycle Duration
+        </div>
+        <select>
+          <option> 1 minute </option>
+          <option> 2 minute </option>
+          <option> 3 minute </option>
+          <option> 4 minute </option>
+          <option> 5 minute </option>
+        </select>
+      </label>
+    </div>
+
+    <div class="card">
+      <label class="item item-text-wrap">
+        "It's not the heat, it's the humidity." Heat index is calculated through the humidity and the temperature
+        and is a more accurate representation on what temperature the body feels. It has also been known to be called
+        "Feels Like Temperature" and the "Apparent temperature."
+      </label>
+    </div>
+    <ion-toggle>
+      Use Heat Index
+    </ion-toggle>
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        System hysterisis is the temperature difference between the turn-on and turn-off. A narrower range means a more stable
+        room temperature while a larger range can mean less power consumption. (A temperature set at 75° with a 1° range
+        means the system will turn on when it is 75.5° and turn off when it is 74.5°.)
+      </div>
+    </div>
+
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class ="input-label">
+          System Hysterisis Range
+        </div>
+        <select>
+          <option> 0.5° </option>
+          <option> 1° </option>
+          <option> 2° </option>
+          <option> 3° </option>
+          <option> 4° </option>
+        </select>
+      </label>
+    </div>
+
+      <ion-toggle  ng-model="settings.toggleLED">
+        LED Light
+      </ion-toggle>
+      <button class="button button-block button-balanced">
+        Reset all Settings
+      </button>
+      <button class="button button-block button-assertive">
+        Reset all memory and settings
+      </button>
+
+  </ion-content>
+</ion-view>
