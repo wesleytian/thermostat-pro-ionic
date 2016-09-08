@@ -1,6 +1,3 @@
-# wesley-remote-app
-app for the wesley remote
-
-<p> 
-  Developed using ionic
-</p>
+# Outlet-Remote-Thermostat-Mobile-App
+Application for the Outlet Remote Thermostat
+Developed using Apache Cordova and Ionic
